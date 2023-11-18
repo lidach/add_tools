@@ -1,5 +1,5 @@
 
-# addtools
+# add_tools
 
-devtools::install_github("lidach/addtools")
+devtools::install_github("lidach/add_tools")
 
