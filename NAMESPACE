@@ -2,6 +2,7 @@
 
 export(calc_error)
 export(check_RTMB_model)
+export(color_palettes)
 export(sci_transl)
 export(theme_lc)
 importFrom(ggplot2,element_blank)
