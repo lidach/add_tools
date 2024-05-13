@@ -1,15 +1,4 @@
-#' @title admb_clean
-#'
-#' @description remove extraneous ADMB files
-#'
-#' @param fn ADMB model name
-#'
-#' @return removes ADMB files
-#'
-#' @export
-#'
-
-admb_clean <- function(fn, which = c("sys", "output")) {
+clean_admb <- function(fn, which = c("sys", "output")) {
   if (length(which) == 1) {
     if (which == "none") {
       return()
@@ -27,6 +16,10 @@ admb_clean <- function(fn, which = c("sys", "output")) {
     "eigv.rpt", "fmin.log", "variance", "sims",
     "hesscheck", "hessian.bin", "dgs2", "diags",
     paste("admodel", c("dep", "hes", "cov"), sep = "."),
+    paste("admb2r", c("log"), sep = "."),
+    paste("cmpdiff.tmp"),
+    paste("gradfil1.tmp"),
+    paste("gradfil2.tmp"),
     list.files(pattern = "xx.*.tmp"),
     list.files(pattern = ".*f1b2list.*"),
     list.files(pattern = paste(fn, "\\.[bpr][0-9]+", sep = ""))
