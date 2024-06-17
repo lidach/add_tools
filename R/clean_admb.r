@@ -1,3 +1,13 @@
+#' @title clean_admb
+#'
+#' @description clean extra ADMB files after compiling and running the model
+#'
+#' @param fn ADMB model name
+#'
+#' @return cleaned out local directory
+#'
+#' @export
+#'
 clean_admb <- function(fn, which = c("sys", "output")) {
   if (length(which) == 1) {
     if (which == "none") {
