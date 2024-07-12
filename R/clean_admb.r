@@ -22,6 +22,9 @@ clean_admb <- function(fn, which = c("sys", "output")) {
   )
   sys.files <- paste(fn, sys.ext, sep = ".")
   gen.files <- list.files(pattern = "_gen(\\.tpl)*")
+  extra.files <- c(
+    list.files(pattern = "retro"), "HL_calculator.dat", "scoringinfo.rdat", "switch.dat"
+  )
   sys.other <- c(
     "eigv.rpt", "fmin.log", "variance", "sims",
     "hesscheck", "hessian.bin", "dgs2", "diags",
